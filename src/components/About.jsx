@@ -24,6 +24,21 @@ const About = () => {
 
     const handleContactSubmit = async (e) => {
         e.preventDefault();
+
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        if (!serviceId || !templateId || !publicKey) {
+            console.error('EmailJS configuration is missing keys');
+            toast({
+                title: "Config Error ⚙️",
+                description: "Faltan las claves de EmailJS. Por favor verifica los secretos en GitHub.",
+                variant: "destructive",
+            });
+            return;
+        }
+
         setIsSubmitting(true);
 
         try {
@@ -34,10 +49,10 @@ const About = () => {
             };
 
             await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                serviceId,
+                templateId,
                 templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                publicKey
             );
 
             toast({
@@ -47,9 +62,10 @@ const About = () => {
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
             console.error('Submission Error:', error);
+            const errorMessage = error?.text || "Hubo un problema al enviar tu mensaje.";
             toast({
                 title: "Error ❌",
-                description: "Hubo un problema al enviar tu mensaje. Por favor intenta de nuevo.",
+                description: `Error: ${errorMessage}. Por favor intenta de nuevo.`,
                 variant: "destructive",
             });
         } finally {
