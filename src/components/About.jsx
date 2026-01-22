@@ -39,7 +39,7 @@ const About = () => {
             return;
         }
 
-        console.log('Keys detected, proceeding with submission...'); // Trigger build comment
+        console.log('Sending via EmailJS...'); // Rebuild trigger with new secrets
 
 
         setIsSubmitting(true);
