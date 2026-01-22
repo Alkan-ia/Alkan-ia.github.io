@@ -98,7 +98,7 @@ export const translations = {
                 { title: 'Our Mission', description: 'To empower businesses with cutting-edge AI automation solutions that drive efficiency and innovation.' },
                 { title: 'Expert Team', description: 'A dedicated team of AI specialists and automation experts committed to delivering exceptional results.' },
                 { title: 'Innovation', description: 'We stay at the forefront of AI technology, constantly exploring new possibilities and solutions.' },
-                { title: 'Excellence', description: 'Proven track record of successful projects and satisfied clients across various industries.' },
+                { title: 'Excellence', description: 'Develop high-quality successful projects to increase our clients\' productivity.' },
             ],
             contact: {
                 title: 'Get In Touch',
@@ -227,7 +227,7 @@ export const translations = {
                 { title: 'Nuestra Misión', description: 'Empoderar a las empresas con soluciones de automatización de IA de vanguardia que impulsen la eficiencia y la innovación.' },
                 { title: 'Equipo Experto', description: 'Un equipo dedicado de especialistas en IA y automatización comprometidos con entregar resultados excepcionales.' },
                 { title: 'Innovación', description: 'Nos mantenemos a la vanguardia de la tecnología de IA, explorando constantemente nuevas posibilidades y soluciones.' },
-                { title: 'Excelencia', description: 'Historial probado de proyectos exitosos y clientes satisfechos en diversas industrias.' },
+                { title: 'Excelencia', description: 'Desarrollar proyectos exitosos de alta calidad para incrementar la productividad de nuestros clientes.' },
             ],
             contact: {
                 title: 'Contáctanos',
