@@ -45,11 +45,6 @@ const Navbar = () => {
                         className="flex items-center gap-3 cursor-pointer"
                         onClick={() => scrollToSection('hero')}
                     >
-                        <img
-                            src="https://horizons-cdn.hostinger.com/c0250367-9258-483f-8c22-9a383c3e3373/t-M22ki.jpg"
-                            alt="Alkan IA Logo"
-                            className="h-10 w-10"
-                        />
                         <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent">
                             Alkan IA
                         </span>

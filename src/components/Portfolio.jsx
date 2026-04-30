@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Code } from 'lucide-react';
+import { ExternalLink, Code, Bot } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import chatbotIcon from '../assets/chatbot-icon.png';
 
 const Portfolio = () => {
     const { t } = useLanguage();
 
     const projectImages = [
         'https://images.unsplash.com/photo-1572177812156-58036aae439c',
-        'https://horizons-cdn.hostinger.com/c0250367-9258-483f-8c22-9a383c3e3373/df5f41d5fb816cb605f3fed87dfb6e97.png',
+        chatbotIcon,
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
         'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb',
         'https://images.unsplash.com/photo-1542744173-8e7e53415bb0',
@@ -91,7 +92,10 @@ const Portfolio = () => {
                             </div>
 
                             <div className="p-6">
-                                <h3 className="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                                <h3 className="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2">
+                                    {(project.title.includes('Bot') || project.title.includes('Chatbot')) && (
+                                        <Bot className="w-6 h-6 text-cyan-400" />
+                                    )}
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-300 leading-relaxed">

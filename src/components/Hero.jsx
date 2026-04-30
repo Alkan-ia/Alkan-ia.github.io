@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import heroImage from '../assets/hero-image.jpg';
 
 const Hero = () => {
     const { t } = useLanguage();
@@ -99,7 +100,7 @@ const Hero = () => {
                     <img
                         className="mx-auto rounded-2xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/20 max-w-4xl w-full"
                         alt="AI automation dashboard"
-                        src="https://horizons-cdn.hostinger.com/c0250367-9258-483f-8c22-9a383c3e3373/generated-image-december-18-2025---6_29pm-G9hlu.png"
+                        src={heroImage}
                     />
                 </motion.div>
             </div>
